@@ -84,6 +84,8 @@ _x86_Disk_Reset:
     push bp             ; save old call frame
     mov bp, sp          ; initialize new call frame
 
+    
+
     ; restore old call frame
     mov sp, bp
     pop bp
@@ -96,6 +98,19 @@ _x86_Disk_Reset:
 ;                          uint8_t count,
 ;                          uint8_t far* dataOut);
 ;
+global _x86_Disk_Read
+_x86_Disk_Read:
+    ; make new call frame
+    push bp             ; save old call frame
+    mov bp, sp          ; initialize new call frame
+
+    
+
+    ; restore old call frame
+    mov sp, bp
+    pop bp
+    ret
+
 ;void _cdecl x86_Disk_GetDriveParams(uint8_t drive,
 ;                                    uint8_t* driveTypeOut,
 ;                                    uint16_t* cylindersOut,

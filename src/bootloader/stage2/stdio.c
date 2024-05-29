@@ -119,7 +119,7 @@ int* printf_number(int* argp, int length, bool sign, int radix) {
     int number_sign = 1;
     int pos = 0;
 
-    // proccess length
+    // process length
     switch(length) {
         case PRINTF_LENGTH_SHORT_SHORT:
         case PRINTF_LENGTH_SHORT:
